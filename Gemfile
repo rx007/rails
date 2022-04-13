@@ -11,7 +11,7 @@ gem 'mocha', '~> 0.14', require: false
 
 gem 'rack-cache', '~> 1.2'
 gem 'jquery-rails'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.1.1'
 gem 'turbolinks', github: 'turbolinks/turbolinks-rails'
 
 # require: false so bcrypt is loaded only when has_secure_password is used.
@@ -82,7 +82,7 @@ group :test do
 end
 
 platforms :ruby, :mswin, :mswin64, :mingw, :x64_mingw do
-  gem 'nokogiri', '>= 1.6.7.1'
+  gem 'nokogiri', '>= 1.13.4'
 
   # Needed for compiling the ActionDispatch::Journey parser.
   gem 'racc', '>=1.4.6', require: false
