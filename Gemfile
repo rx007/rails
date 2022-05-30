@@ -9,9 +9,9 @@ gem 'rake', '>= 11.1'
 # be loaded after loading the test library.
 gem 'mocha', '~> 0.14', require: false
 
-gem 'rack-cache', '~> 1.2'
+gem 'rack-cache', '~> 1.5', '>= 1.5.1'
 gem 'jquery-rails'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.1.1'
 gem 'turbolinks', github: 'turbolinks/turbolinks-rails'
 
 # require: false so bcrypt is loaded only when has_secure_password is used.
@@ -39,7 +39,7 @@ gem 'listen', '~> 3.0.5', require: false
 
 # Active Job.
 group :job do
-  gem 'resque', '< 1.26', require: false
+  gem 'resque', '>= 1.25.2', '< 1.26', require: false
   gem 'resque-scheduler', require: false
   gem 'sidekiq', require: false
   gem 'sucker_punch', require: false
