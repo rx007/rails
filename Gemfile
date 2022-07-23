@@ -10,8 +10,8 @@ gem 'rake', '>= 11.1'
 gem 'mocha', '~> 0.14', require: false
 
 gem 'rack-cache', '~> 1.2'
-gem 'jquery-rails'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'jquery-rails', '>= 4.1.1'
+gem 'coffee-rails', '~> 4.1.1'
 gem 'turbolinks', github: 'turbolinks/turbolinks-rails'
 
 # require: false so bcrypt is loaded only when has_secure_password is used.
@@ -43,14 +43,14 @@ group :job do
   gem 'resque-scheduler', require: false
   gem 'sidekiq', require: false
   gem 'sucker_punch', require: false
-  gem 'delayed_job', require: false
+  gem 'delayed_job', '>= 4.1.2', require: false
   gem 'queue_classic', github: "QueueClassic/queue_classic", branch: 'master', require: false, platforms: :ruby
   gem 'sneakers', require: false
   gem 'que', require: false
   gem 'backburner', require: false
   gem 'qu-rails', github: "bkeepers/qu", branch: "master", require: false
   gem 'qu-redis', require: false
-  gem 'delayed_job_active_record', require: false
+  gem 'delayed_job_active_record', '>= 4.1.1', require: false
   gem 'sequel', require: false
 end
 
