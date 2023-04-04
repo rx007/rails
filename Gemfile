@@ -3,15 +3,15 @@ source 'https://rubygems.org'
 gemspec
 
 # We need a newish Rake since Active Job sets its test tasks' descriptions.
-gem 'rake', '>= 11.1'
+gem 'rake', '>= 12.3.3'
 
 # This needs to be with require false to ensure correct loading order, as it has to
 # be loaded after loading the test library.
 gem 'mocha', '~> 0.14', require: false
 
-gem 'rack-cache', '~> 1.2'
-gem 'jquery-rails'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'rack-cache', '~> 1.5', '>= 1.5.1'
+gem 'jquery-rails', '>= 4.4.0'
+gem 'coffee-rails', '~> 4.2.2'
 gem 'turbolinks', github: 'turbolinks/turbolinks-rails'
 
 # require: false so bcrypt is loaded only when has_secure_password is used.
@@ -21,48 +21,48 @@ gem 'bcrypt', '~> 3.1.11', require: false
 
 # This needs to be with require false to avoid it being automatically loaded by
 # sprockets.
-gem 'uglifier', '>= 1.3.0', require: false
+gem 'uglifier', '>= 2.7.2', require: false
 
 # Track stable branch of sass because it doesn't have circular require warnings.
 gem 'sass', github: 'sass/sass', branch: 'stable', require: false
 
 group :doc do
-  gem 'sdoc', '~> 0.4.0'
-  gem 'redcarpet', '~> 3.2.3', platforms: :ruby
+  gem 'sdoc', '~> 1.0.0'
+  gem 'redcarpet', '~> 3.5.1', platforms: :ruby
   gem 'w3c_validators'
   gem 'kindlerb', '0.1.1'
 end
 
 # Active Support.
-gem 'dalli', '>= 2.2.1'
+gem 'dalli', '>= 3.2.3'
 gem 'listen', '~> 3.0.5', require: false
 
 # Active Job.
 group :job do
-  gem 'resque', '< 1.26', require: false
+  gem 'resque', '>= 1.25.2', '< 1.26', require: false
   gem 'resque-scheduler', require: false
-  gem 'sidekiq', require: false
+  gem 'sidekiq', '>= 6.2.1', require: false
   gem 'sucker_punch', require: false
-  gem 'delayed_job', require: false
+  gem 'delayed_job', '>= 4.1.9', require: false
   gem 'queue_classic', github: "QueueClassic/queue_classic", branch: 'master', require: false, platforms: :ruby
   gem 'sneakers', require: false
   gem 'que', require: false
   gem 'backburner', require: false
   gem 'qu-rails', github: "bkeepers/qu", branch: "master", require: false
   gem 'qu-redis', require: false
-  gem 'delayed_job_active_record', require: false
+  gem 'delayed_job_active_record', '>= 4.1.5', require: false
   gem 'sequel', require: false
 end
 
 # Action Cable
 group :cable do
-  gem 'puma', require: false
+  gem 'puma', '>= 4.3.12', require: false
 
   gem 'em-hiredis', require: false
   gem 'hiredis', require: false
   gem 'redis', require: false
 
-  gem 'faye-websocket', require: false
+  gem 'faye-websocket', '>= 0.11.0', require: false
 end
 
 # Add your own local bundler stuff.
@@ -82,7 +82,7 @@ group :test do
 end
 
 platforms :ruby, :mswin, :mswin64, :mingw, :x64_mingw do
-  gem 'nokogiri', '>= 1.6.7.1'
+  gem 'nokogiri', '>= 1.13.9'
 
   # Needed for compiling the ActionDispatch::Journey parser.
   gem 'racc', '>=1.4.6', require: false
