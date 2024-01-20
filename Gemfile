@@ -39,8 +39,8 @@ gem 'listen', '~> 3.0.5', require: false
 
 # Active Job.
 group :job do
-  gem 'resque', '< 1.26', require: false
-  gem 'resque-scheduler', require: false
+  gem 'resque', '~> 1.26', require: false
+  gem 'resque-scheduler', '>= 4.1.0', require: false
   gem 'sidekiq', require: false
   gem 'sucker_punch', require: false
   gem 'delayed_job', require: false
