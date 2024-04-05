@@ -9,9 +9,9 @@ gem 'rake', '>= 11.1'
 # be loaded after loading the test library.
 gem 'mocha', '~> 0.14', require: false
 
-gem 'rack-cache', '~> 1.2'
-gem 'jquery-rails'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'rack-cache', '~> 1.6', '>= 1.6.1'
+gem 'jquery-rails', '>= 4.1.1'
+gem 'coffee-rails', '~> 4.2.2'
 gem 'turbolinks', github: 'turbolinks/turbolinks-rails'
 
 # require: false so bcrypt is loaded only when has_secure_password is used.
@@ -27,10 +27,10 @@ gem 'uglifier', '>= 1.3.0', require: false
 gem 'sass', github: 'sass/sass', branch: 'stable', require: false
 
 group :doc do
-  gem 'sdoc', '~> 0.4.0'
+  gem 'sdoc', '~> 1.0.0'
   gem 'redcarpet', '~> 3.2.3', platforms: :ruby
-  gem 'w3c_validators'
-  gem 'kindlerb', '0.1.1'
+  gem 'w3c_validators', '>= 1.3'
+  gem 'kindlerb', '1.0.1'
 end
 
 # Active Support.
@@ -39,8 +39,8 @@ gem 'listen', '~> 3.0.5', require: false
 
 # Active Job.
 group :job do
-  gem 'resque', '< 1.26', require: false
-  gem 'resque-scheduler', require: false
+  gem 'resque', '~> 1.26', require: false
+  gem 'resque-scheduler', '>= 4.1.0', require: false
   gem 'sidekiq', require: false
   gem 'sucker_punch', require: false
   gem 'delayed_job', require: false
@@ -82,7 +82,7 @@ group :test do
 end
 
 platforms :ruby, :mswin, :mswin64, :mingw, :x64_mingw do
-  gem 'nokogiri', '>= 1.6.7.1'
+  gem 'nokogiri', '>= 1.15.6'
 
   # Needed for compiling the ActionDispatch::Journey parser.
   gem 'racc', '>=1.4.6', require: false
