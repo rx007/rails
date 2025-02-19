@@ -39,7 +39,7 @@ gem 'listen', '~> 3.0.5', require: false
 
 # Active Job.
 group :job do
-  gem 'resque', '< 1.26', require: false
+  gem 'resque', '~> 2.2', '>= 2.2.1', require: false
   gem 'resque-scheduler', require: false
   gem 'sidekiq', require: false
   gem 'sucker_punch', require: false
@@ -82,7 +82,7 @@ group :test do
 end
 
 platforms :ruby, :mswin, :mswin64, :mingw, :x64_mingw do
-  gem 'nokogiri', '>= 1.6.7.1'
+  gem 'nokogiri', '>= 1.18.3'
 
   # Needed for compiling the ActionDispatch::Journey parser.
   gem 'racc', '>=1.4.6', require: false
